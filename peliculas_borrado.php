@@ -12,7 +12,9 @@
 <body>
 <div class="alert alert-success" role="alert">
             <!-- INCLUIR CÓDIGO PHP -->
-
+    <?php
+        include("lib/utils.php");
+    ?>
     
 </body>
 </html>

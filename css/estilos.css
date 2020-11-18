@@ -8,3 +8,27 @@ a.custom-card,
 a.custom-card:hover {
   color: inherit;
 }
+
+table { 
+width: 100%;
+}
+th, td{
+	width: 25%;
+	text-align: center;
+	padding: 1em;
+}
+
+td.botones{
+	width: 33%;
+}
+
+input.editar{
+	color: white;
+	background: blue;
+}
+
+input.borrar{
+	color: white;
+background: red;
+}
+

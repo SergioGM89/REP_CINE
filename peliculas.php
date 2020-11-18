@@ -18,6 +18,82 @@
     <div class="container">
         <div class="row mx-auto">
             <!-- INCLUIR CÓDIGO PHP -->
+            <table>
+            <!-- EL PADRINO -->
+				<td>
+                    <div class="imagen" style="margin-bottom:5px;">
+                        <a href="imgs/peliculas/1.jpg" title="El padrino" alt="El padrino">
+                                <img class="card-img-top" src="imgs/peliculas/1.jpg" >		
+                        </a>
+                    </div>
+                    
+                    <div class="meta">
+                    <a class="nombre" href="imgs/peliculas/1.jpg" title="El padrino">El padrino</a>
+                    </div>
+                    <table>
+                    <td class="botones">
+                    <div>
+                        <form class="boton_editar" method="post" action="peliculas_form.php">
+                        <div class="editar"><input class="editar" type="submit" value="Editar" name="edita1"></div>
+                    </div>
+                    </td>
+
+                    <td class="botones">
+                    <div>
+                        <form class="boton_borrar" method="post" action="peliculas_borrado.php">
+                        <div class="borrar"><input class="borrar"type="submit" value="Borrar" name="borra1"></div>
+                    </div>
+                    </td>
+                    </table>
+                    
+                </td>
+                <!-- EL PADRINO II -->
+                <td>
+                    <div class="imagen" style="margin-bottom:5px;">
+                        <a href="imgs/peliculas/1.jpg" title="El padrino 2" alt="El padrino 2">
+                                <img class="card-img-top" src="imgs/peliculas/2.jpg" >
+                        </a>
+                    </div>
+                    
+                    <div class="meta">
+                    <a class="nombre" href="imgs/peliculas/2.jpg" title="El padrino 2">El padrino II</a>
+                    </div>
+                    
+                    
+                    
+                </td>
+                <!-- SENDEROS DE GLORIA -->
+                <td>
+                    <div class="imagen" style="margin-bottom:5px;">
+                        <a href="imgs/peliculas/1.jpg" title="Senderos de gloria" alt="Senderos de gloria">
+                                <img class="card-img-top" src="imgs/peliculas/3.jpg" >
+                        </a>
+                    </div>
+                    
+                    <div class="meta">
+                    <a class="nombre" href="imgs/peliculas/3.jpg" title="Senderos de gloria">Senderos de gloria</a>
+                    </div>
+                    
+                    
+                </td>
+                <!-- THE FRONT PAGE -->
+                <td>
+                    <div class="imagen" style="margin-bottom:5px;">
+                        <a href="imgs/peliculas/1.jpg" title="The front page" alt="The front page">
+                                <img class="card-img-top" src="imgs/peliculas/4.jpg" >
+                        </a>
+                    </div>
+                    
+                    <div class="meta">
+                    <a class="nombre" href="imgs/peliculas/4.jpg" title="The front page">The front page</a>
+                    </div>
+                    
+                    
+                </td>
+            </table>
+            <?php
+                
+            ?>
         </div>
     </div>
 </body>
