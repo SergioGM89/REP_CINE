@@ -13,7 +13,25 @@
 <div class="alert alert-success" role="alert">
             <!-- INCLUIR CÓDIGO PHP -->
     <?php
+        //Llamamos a utils.php
         include("lib/utils.php");
+
+        //Comprobamos la peli a borrar
+        if(array_key_exists ("borrado1" , $_REQUEST )){
+            $peli = "padrino";
+        }
+        else if(array_key_exists ("borrado2" , $_REQUEST )){
+            $peli = "padrino II";
+        }
+        else if(array_key_exists ("borrado3" , $_REQUEST )){
+            $peli = "senderos";
+        }
+        else if(array_key_exists ("borrado4" , $_REQUEST )){
+            $peli = "front";
+        }
+
+        //Llamamos a la función de borrado
+        borrar_pelicula($peli);
     ?>
     
 </body>
