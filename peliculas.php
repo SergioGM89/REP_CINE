@@ -20,12 +20,10 @@
             <!-- INCLUIR CÓDIGO PHP -->
             <?php
                 //Llamamos a utils.php
-                include("lib/utils.php");
+                include "lib/utils.php";
                 
-                $array_peliculas = lee_y_devuelve_pelis();
-                //leemos el archivo 
-                $manejador = fopen($file, "r");
-                // almacenara la data
+                //$array_peliculas = lee_y_devuelve_pelis();
+                
             ?>
             <table>
             <!-- EL PADRINO -->
@@ -44,13 +42,15 @@
                     <div>
                         <form class="boton_editar" method="post" action="peliculas_form.php">
                         <div class="editar"><input class="editar" type="submit" value="Editar" name="edita1"></div>
+                    </form>
                     </div>
                     </td>
 
                     <td class="botones">
                     <div>
                         <form class="boton_borrar" method="post" action="peliculas_borrado.php">
-                        <div class="borrar"><input class="borrar"type="submit" value="Borrar" name="borra1"></div>
+                        <div class="borrar"><input class="borrar" type="submit" value="Borrar" name="borra1"></div>
+                        </form>
                     </div>
                     </td>
                     </table>

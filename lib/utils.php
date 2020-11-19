@@ -13,14 +13,14 @@
                 // aumentamos en 1 la linea
                 $i++;
                 // validamos que sea el número de linea especificado y saltamos a la siguiente interacción
-                if ($num == ($i -1)) continue;
+                if ($num == ($i)) continue;
                 // almacenamos los resultados
-                $result .= $line."\n";  
+                $result .= $line;  
             }
             // cerramos el archivo
             fclose($manejador);
         } else {
-          die("ups! no se pudo abrir el arcivo {$file};");
+          die("ups! no se pudo abrir el archivo {$file};");
         }
 
         // reabrimos en modo escritura

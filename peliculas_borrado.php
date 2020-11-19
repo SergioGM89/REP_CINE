@@ -19,22 +19,26 @@
         $file_pelis = "bbdd/peliculas.csv";
     
         //Comprobamos la peli a borrar
-        if(array_key_exists ("borrado1" , $_REQUEST )){
+        if(array_key_exists ("borra1" , $_REQUEST )){
             $num_peli = "1";
         }
-        else if(array_key_exists ("borrado2" , $_REQUEST )){
+        else if(array_key_exists ("borra2" , $_REQUEST )){
             $num_peli = "2";
         }
-        else if(array_key_exists ("borrado3" , $_REQUEST )){
+        else if(array_key_exists ("borra3" , $_REQUEST )){
             $num_peli = "3";
         }
-        else if(array_key_exists ("borrado4" , $_REQUEST )){
+        else if(array_key_exists ("borra4" , $_REQUEST )){
             $num_peli = "4";
         }
 
         //Llamamos a la función de borrado
         borrar_pelicula($file_pelis, $num_peli);
     ?>
+
+    <p>La película ha sido borrada con éxito</p>
+
+    <a href="index.html">Volver al incio</a>
     
 </body>
 </html>
