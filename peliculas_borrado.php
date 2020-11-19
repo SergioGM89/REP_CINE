@@ -16,22 +16,24 @@
         //Llamamos a utils.php
         include("lib/utils.php");
 
+        $file_pelis = "bbdd/peliculas.csv";
+    
         //Comprobamos la peli a borrar
         if(array_key_exists ("borrado1" , $_REQUEST )){
-            $peli = "padrino";
+            $num_peli = "1";
         }
         else if(array_key_exists ("borrado2" , $_REQUEST )){
-            $peli = "padrino II";
+            $num_peli = "2";
         }
         else if(array_key_exists ("borrado3" , $_REQUEST )){
-            $peli = "senderos";
+            $num_peli = "3";
         }
         else if(array_key_exists ("borrado4" , $_REQUEST )){
-            $peli = "front";
+            $num_peli = "4";
         }
 
         //Llamamos a la función de borrado
-        borrar_pelicula($peli);
+        borrar_pelicula($file_pelis, $num_peli);
     ?>
     
 </body>

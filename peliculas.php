@@ -18,6 +18,15 @@
     <div class="container">
         <div class="row mx-auto">
             <!-- INCLUIR CÓDIGO PHP -->
+            <?php
+                //Llamamos a utils.php
+                include("lib/utils.php");
+                
+                $array_peliculas = lee_y_devuelve_pelis();
+                //leemos el archivo 
+                $manejador = fopen($file, "r");
+                // almacenara la data
+            ?>
             <table>
             <!-- EL PADRINO -->
 				<td>
