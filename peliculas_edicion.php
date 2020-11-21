@@ -15,6 +15,9 @@
 <div class="alert alert-success" role="alert">
             <!-- INCLUIR CÓDIGO PHP -->
 
+
+<p>La película ha sido guardada</p>
+<a href="index.html">Volver al inicio</a>
 </body>
 
 </html>

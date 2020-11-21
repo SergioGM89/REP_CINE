@@ -18,10 +18,6 @@ th, td{
 	padding: 1em;
 }
 
-td.botones{
-	width: 33%;
-}
-
 input.editar{
 	color: white;
 	background: blue;
@@ -29,6 +25,5 @@ input.editar{
 
 input.borrar{
 	color: white;
-background: red;
+	background: red;
 }
-
