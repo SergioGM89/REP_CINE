@@ -17,13 +17,3 @@ th, td{
 	text-align: center;
 	padding: 1em;
 }
-
-input.editar{
-	color: white;
-	background: blue;
-}
-
-input.borrar{
-	color: white;
-	background: red;
-}

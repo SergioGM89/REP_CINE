@@ -20,36 +20,36 @@
             <!-- INCLUIR CÓDIGO PHP -->
             <?php
                 //Llamamos a utils.php
-                include "lib/utils.php";
+                include("lib/utils.php");
                 
-                //$array_peliculas = lee_y_devuelve_pelis();
-                
+                $array_peliculas = lee_y_devuelve_pelis();
+                print_r($array_peliculas);
             ?>
             <table>
             <!-- EL PADRINO -->
 				<td>
-                    <div class="imagen" style="margin-bottom:5px;">
-                        <a href="imgs/peliculas/1.jpg" title="El padrino" alt="El padrino">
+                    <div class="card" style="margin-bottom:5px;">
+                        <a class="custom-card" href="imgs/peliculas/1.jpg" title="El padrino" alt="El padrino">
                                 <img class="card-img-top" src="imgs/peliculas/1.jpg" >		
                         </a>
                     </div>
                     
-                    <div class="meta">
-                    <a class="nombre" href="imgs/peliculas/1.jpg" title="El padrino">El padrino</a>
+                    <div class="card-body">
+                    <a class="nombre" style="font-weight: bold;color: black" href="imgs/peliculas/1.jpg" title="El padrino">El padrino</a>
                     </div>
                     <table>
-                    <td class="botones">
+                    <td>
                     <div>
                         <form class="boton_editar" method="post" action="peliculas_form.php">
-                        <div class="editar"><input class="editar" type="submit" value="Editar" name="edita1"></div>
+                        <div class="editar"><input class="btn btn-primary" type="submit" value="Editar" name="edita1"></div>
                     </form>
                     </div>
                     </td>
 
-                    <td class="botones">
+                    <td>
                     <div>
                         <form class="boton_borrar" method="post" action="peliculas_borrado.php">
-                        <div class="borrar"><input class="borrar" type="submit" value="Borrar" name="borra1"></div>
+                        <div class="borrar"><input class="btn btn-danger" type="submit" value="Borrar" name="borra1"></div>
                         </form>
                     </div>
                     </td>
@@ -58,45 +58,93 @@
                 </td>
                 <!-- EL PADRINO II -->
                 <td>
-                    <div class="imagen" style="margin-bottom:5px;">
-                        <a href="imgs/peliculas/1.jpg" title="El padrino 2" alt="El padrino 2">
+                    <div class="card" style="margin-bottom:5px;">
+                        <a class="custom-card" href="imgs/peliculas/1.jpg" title="El padrino 2" alt="El padrino 2">
                                 <img class="card-img-top" src="imgs/peliculas/2.jpg" >
                         </a>
                     </div>
                     
-                    <div class="meta">
-                    <a class="nombre" href="imgs/peliculas/2.jpg" title="El padrino 2">El padrino II</a>
+                    <div class="card-body">
+                    <a class="nombre" style="font-weight: bold;color: black" href="imgs/peliculas/2.jpg" title="El padrino 2">El padrino II</a>
                     </div>
-                    
+                    <table>
+                    <td>
+                    <div>
+                        <form class="boton_editar" method="post" action="peliculas_form.php">
+                        <div class="editar"><input class="btn btn-primary" type="submit" value="Editar" name="edita2"></div>
+                    </form>
+                    </div>
+                    </td>
+
+                    <td>
+                    <div>
+                        <form class="boton_borrar" method="post" action="peliculas_borrado.php">
+                        <div class="borrar"><input class="btn btn-danger" type="submit" value="Borrar" name="borra2"></div>
+                        </form>
+                    </div>
+                    </td>
+                    </table>
                     
                     
                 </td>
                 <!-- SENDEROS DE GLORIA -->
                 <td>
-                    <div class="imagen" style="margin-bottom:5px;">
-                        <a href="imgs/peliculas/1.jpg" title="Senderos de gloria" alt="Senderos de gloria">
+                    <div class="card" style="margin-bottom:5px;">
+                        <a class="custom-card" href="imgs/peliculas/1.jpg" title="Senderos de gloria" alt="Senderos de gloria">
                                 <img class="card-img-top" src="imgs/peliculas/3.jpg" >
                         </a>
                     </div>
                     
-                    <div class="meta">
-                    <a class="nombre" href="imgs/peliculas/3.jpg" title="Senderos de gloria">Senderos de gloria</a>
+                    <div class="card-body">
+                    <a class="nombre" style="font-weight: bold;color: black" href="imgs/peliculas/3.jpg" title="Senderos de gloria">Senderos de gloria</a>
                     </div>
-                    
+                    <table>
+                    <td>
+                    <div>
+                        <form class="boton_editar" method="post" action="peliculas_form.php">
+                        <div class="editar"><input class="btn btn-primary" type="submit" value="Editar" name="edita3"></div>
+                    </form>
+                    </div>
+                    </td>
+
+                    <td>
+                    <div>
+                        <form class="boton_borrar" method="post" action="peliculas_borrado.php">
+                        <div class="borrar"><input class="btn btn-danger" type="submit" value="Borrar" name="borra3"></div>
+                        </form>
+                    </div>
+                    </td>
+                    </table>
                     
                 </td>
                 <!-- THE FRONT PAGE -->
                 <td>
-                    <div class="imagen" style="margin-bottom:5px;">
-                        <a href="imgs/peliculas/1.jpg" title="The front page" alt="The front page">
+                    <div class="card" style="margin-bottom:5px;">
+                        <a class="custom-card" href="imgs/peliculas/1.jpg" title="The front page" alt="The front page">
                                 <img class="card-img-top" src="imgs/peliculas/4.jpg" >
                         </a>
                     </div>
                     
-                    <div class="meta">
-                    <a class="nombre" href="imgs/peliculas/4.jpg" title="The front page">The front page</a>
+                    <div class="card-body">
+                    <a class="nombre" style="font-weight: bold;color: black" href="imgs/peliculas/4.jpg" title="The front page">The front page</a>
                     </div>
-                    
+                    <table>
+                    <td>
+                    <div>
+                        <form class="boton_editar" method="post" action="peliculas_form.php">
+                        <div class="editar"><input class="btn btn-primary" type="submit" value="Editar" name="edita4"></div>
+                    </form>
+                    </div>
+                    </td>
+
+                    <td>
+                    <div>
+                        <form class="boton_borrar" method="post" action="peliculas_borrado.php">
+                        <div class="borrar"><input class="btn btn-danger" type="submit" value="Borrar" name="borra4"></div>
+                        </form>
+                    </div>
+                    </td>
+                    </table>
                     
                 </td>
             </table>

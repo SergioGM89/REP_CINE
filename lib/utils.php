@@ -31,21 +31,22 @@
         fclose($manejador);
     }
 
-    //Leemos el csv de películas
+    //Leemos el csv de películas y devolvemos el array con los datos
     function lee_y_devuelve_pelis(){
         $fichero = "bbdd/peliculas.csv";
-        $array_pelis = array();
+        $array_pelis;
 
         //Si existe el fichero lo abrimos para leerlo
         $manejador = fopen($fichero, "r");
         if($manejador != FALSE){
-            while($arrayFila= fgetcsv($manejador, 1000, ",") != FALSE){
-                for($i=0; $i<count($arrayFila); $i++){
-                    $array_pelis.push($arrayFila);
-                }
-            }
+            $j=0;
+            while(($arrayFila= fgetcsv($manejador, 1000, ",")) != FALSE){     
+                $array_pelis[$j]  = array("id" => $arrayFila[0], "titulo" => $arrayFila[1], "anyo" => $arrayFila[2], "duracion" => $arrayFila[3]);
+                $j++;
+            }          
             fclose($manejador);
         }
+        return $array_pelis;
     }
 
 ?>
