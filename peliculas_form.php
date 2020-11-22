@@ -15,10 +15,24 @@
         <h1>Edición de películas</h1>
 		 <!-- INCLUIR CÓDIGO PHP -->
         <?php
-            
+            $num_peli;
+            //Comprobamos la peli a editar
+            if(array_key_exists ("edita1" , $_REQUEST )){
+                $num_peli = "1";
+            }
+            else if(array_key_exists ("edita2" , $_REQUEST )){
+                $num_peli = "2";
+            }
+            else if(array_key_exists ("edita3" , $_REQUEST )){
+                $num_peli = "3";
+            }
+            else if(array_key_exists ("edita4" , $_REQUEST )){
+                $num_peli = "4";
+            }
         ?>
 
         <form name="edicion" method="post" action="peliculas_edicion.php">
+            <input type="hidden" name="id" value="<?php echo "".$num_peli; ?>">
             Título: <br><input type="text" name="titulo"><br>
             <br>
             Anyo: <br><input type="integer" name="anyo"><br>

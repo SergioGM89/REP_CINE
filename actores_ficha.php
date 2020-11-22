@@ -17,7 +17,20 @@
     </div>
     <div class="container">
 	<!-- INCLUIR CÓDIGO PHP -->
-        
+        <?php
+            include("lib/utils.php");
+
+            $array_actores = tabla_actores();
+            
+            for ($i=0; $i<count($array_actores); $i++) {
+                if ($array_actores[$i]["id"] == $_GET['id']) {
+                    echo "<b>Nombre: </b>".$array_actores[$i]["nombre"]."<br>";
+                    echo "<b>Año: </b>".$array_actores[$i]["anyo"]."<br>";
+                    echo "<b>País: </b>".$array_actores[$i]["lugar"]."<br>";
+                    continue;
+                }
+            }
+        ?>
     </div>
 </body>
 

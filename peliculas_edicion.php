@@ -14,10 +14,16 @@
 <body>
 <div class="alert alert-success" role="alert">
             <!-- INCLUIR CÓDIGO PHP -->
+            <?php
+        //Llamamos a utils.php
+        include("lib/utils.php");
 
-
-<p>La película ha sido guardada</p>
-<a href="index.html">Volver al inicio</a>
+        $file_pelis = "bbdd/peliculas.csv";
+        //Llamamos a la función de edición
+        editar_pelicula($file_pelis, $_REQUEST["id"], $_REQUEST["titulo"], $_REQUEST["anyo"], $_REQUEST["duracion"]);
+    ?>
+    <p>La película ha sido guardada</p>
+    <a href="index.html">Volver al inicio</a>
 </body>
 
 </html>

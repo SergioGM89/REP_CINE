@@ -17,7 +17,20 @@
     </div>
     <div class="container">
 	<!-- INCLUIR CÓDIGO PHP -->
-        
+    <?php
+            include("lib/utils.php");
+
+            $array_directores = tabla_directores();
+            
+            for ($i=0; $i<count($array_directores); $i++) {
+                if ($array_directores[$i]["id"] == $_GET['id']) {
+                    echo "<b>Nombre: </b>".$array_directores[$i]["nombre"]."<br>";
+                    echo "<b>Año: </b>".$array_directores[$i]["anyo"]."<br>";
+                    echo "<b>País: </b>".$array_directores[$i]["lugar"]."<br>";
+                    continue;
+                }
+            }
+        ?> 
     </div>
 </body>
 

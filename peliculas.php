@@ -23,133 +23,163 @@
                 include("lib/utils.php");
                 
                 $array_peliculas = lee_y_devuelve_pelis();
-                print_r($array_peliculas);
-            ?>
-            <table>
-            <!-- EL PADRINO -->
-				<td>
-                    <div class="card" style="margin-bottom:5px;">
-                        <a class="custom-card" href="imgs/peliculas/1.jpg" title="El padrino" alt="El padrino">
-                                <img class="card-img-top" src="imgs/peliculas/1.jpg" >		
-                        </a>
-                    </div>
-                    
-                    <div class="card-body">
-                    <a class="nombre" style="font-weight: bold;color: black" href="imgs/peliculas/1.jpg" title="El padrino">El padrino</a>
-                    </div>
-                    <table>
-                    <td>
-                    <div>
-                        <form class="boton_editar" method="post" action="peliculas_form.php">
-                        <div class="editar"><input class="btn btn-primary" type="submit" value="Editar" name="edita1"></div>
-                    </form>
-                    </div>
-                    </td>
+                if ($array_peliculas != -1) {
+                    $num_pelis = count($array_peliculas);
+                    //Comprobamos que hayan pelis en la BBDD
+                    if ($num_pelis > 0) {
+                        echo "<table>";
+                        for ($i=0; $i<$num_pelis; $i++) {
+                            switch ($array_peliculas[$i]["id"]) {
+                                
 
-                    <td>
-                    <div>
-                        <form class="boton_borrar" method="post" action="peliculas_borrado.php">
-                        <div class="borrar"><input class="btn btn-danger" type="submit" value="Borrar" name="borra1"></div>
-                        </form>
-                    </div>
-                    </td>
-                    </table>
-                    
-                </td>
-                <!-- EL PADRINO II -->
-                <td>
-                    <div class="card" style="margin-bottom:5px;">
-                        <a class="custom-card" href="imgs/peliculas/1.jpg" title="El padrino 2" alt="El padrino 2">
-                                <img class="card-img-top" src="imgs/peliculas/2.jpg" >
-                        </a>
-                    </div>
-                    
-                    <div class="card-body">
-                    <a class="nombre" style="font-weight: bold;color: black" href="imgs/peliculas/2.jpg" title="El padrino 2">El padrino II</a>
-                    </div>
-                    <table>
-                    <td>
-                    <div>
-                        <form class="boton_editar" method="post" action="peliculas_form.php">
-                        <div class="editar"><input class="btn btn-primary" type="submit" value="Editar" name="edita2"></div>
-                    </form>
-                    </div>
-                    </td>
+                                case 1:
+                                    //EL PADRINO
+                                    echo "
+                                        <td>
+                                            <div class='card' style='margin-bottom:5px;'>
+                                                <a class='custom-card' href='peliculas_ficha.php?id=1' title='".$array_peliculas[$i]['titulo']."' alt='".$array_peliculas[$i]['titulo']."'>
+                                                    <img class='card-img-top' src='imgs/peliculas/1.jpg'>		
 
-                    <td>
-                    <div>
-                        <form class="boton_borrar" method="post" action="peliculas_borrado.php">
-                        <div class="borrar"><input class="btn btn-danger" type="submit" value="Borrar" name="borra2"></div>
-                        </form>
-                    </div>
-                    </td>
-                    </table>
-                    
-                    
-                </td>
-                <!-- SENDEROS DE GLORIA -->
-                <td>
-                    <div class="card" style="margin-bottom:5px;">
-                        <a class="custom-card" href="imgs/peliculas/1.jpg" title="Senderos de gloria" alt="Senderos de gloria">
-                                <img class="card-img-top" src="imgs/peliculas/3.jpg" >
-                        </a>
-                    </div>
-                    
-                    <div class="card-body">
-                    <a class="nombre" style="font-weight: bold;color: black" href="imgs/peliculas/3.jpg" title="Senderos de gloria">Senderos de gloria</a>
-                    </div>
-                    <table>
-                    <td>
-                    <div>
-                        <form class="boton_editar" method="post" action="peliculas_form.php">
-                        <div class="editar"><input class="btn btn-primary" type="submit" value="Editar" name="edita3"></div>
-                    </form>
-                    </div>
-                    </td>
+                                                    <div class='card-body'>
+                                                        <h5 class='nombre' style='font-weight: bold;color: black' href='peliculas_ficha.php?id=1' title='".$array_peliculas[$i]['titulo']."'>".$array_peliculas[$i]['titulo']."</h5>
+                                            
+                                                        <table>
+                                                            <td>
+                                                                <div>
+                                                                    <form class='boton_editar' method='post' action='peliculas_form.php'>
+                                                                    <div class='editar'><input class='btn btn-primary' type='submit' value='Editar' name='edita1'></div>
+                                                                    </form>
+                                                                </div>
+                                                            </td>
+                                            
+                                                            <td>
+                                                                <div>
+                                                                    <form class='boton_borrar' method='post' action='peliculas_borrado.php'>
+                                                                    <div class='borrar'><input class='btn btn-danger' type='submit' value='Borrar' name='borra1'></div>
+                                                                    </form>
+                                            
+                                                                </div>
+                                                            </td>
+                                                        </table>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </td>
+                                    ";
+                                break;
+                                case 2:
+                                    //EL PADRINO 2
+                                    echo "
+                                        <td>
+                                            <div class='card' style='margin-bottom:5px;'>
+                                                <a class='custom-card' href='peliculas_ficha.php?id=2' title='".$array_peliculas[$i]['titulo']."' alt='".$array_peliculas[$i]['titulo']."'>
+                                                    <img class='card-img-top' src='imgs/peliculas/2.jpg'>		
 
-                    <td>
-                    <div>
-                        <form class="boton_borrar" method="post" action="peliculas_borrado.php">
-                        <div class="borrar"><input class="btn btn-danger" type="submit" value="Borrar" name="borra3"></div>
-                        </form>
-                    </div>
-                    </td>
-                    </table>
-                    
-                </td>
-                <!-- THE FRONT PAGE -->
-                <td>
-                    <div class="card" style="margin-bottom:5px;">
-                        <a class="custom-card" href="imgs/peliculas/1.jpg" title="The front page" alt="The front page">
-                                <img class="card-img-top" src="imgs/peliculas/4.jpg" >
-                        </a>
-                    </div>
-                    
-                    <div class="card-body">
-                    <a class="nombre" style="font-weight: bold;color: black" href="imgs/peliculas/4.jpg" title="The front page">The front page</a>
-                    </div>
-                    <table>
-                    <td>
-                    <div>
-                        <form class="boton_editar" method="post" action="peliculas_form.php">
-                        <div class="editar"><input class="btn btn-primary" type="submit" value="Editar" name="edita4"></div>
-                    </form>
-                    </div>
-                    </td>
+                                                    <div class='card-body'>
+                                                        <h5 class='nombre' style='font-weight: bold;color: black' href='peliculas_ficha.php?id=2' title='".$array_peliculas[$i]['titulo']."'>".$array_peliculas[$i]['titulo']."</h5>
+                                            
+                                                        <table>
+                                                            <td>
+                                                                <div>
+                                                                    <form class='boton_editar' method='post' action='peliculas_form.php'>
+                                                                    <div class='editar'><input class='btn btn-primary' type='submit' value='Editar' name='edita2'></div>
+                                                                    </form>
+                                                                </div>
+                                                            </td>
+                                            
+                                                            <td>
+                                                                <div>
+                                                                    <form class='boton_borrar' method='post' action='peliculas_borrado.php'>
+                                                                    <div class='borrar'><input class='btn btn-danger' type='submit' value='Borrar' name='borra2'></div>
+                                                                    </form>
+                                            
+                                                                </div>
+                                                            </td>
+                                                        </table>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </td>
+                                    ";
+                                break;
+                                case 3:
+                                    //SENDEROS DE GLORIA
+                                    echo "
+                                        <td>
+                                            <div class='card' style='margin-bottom:5px;'>
+                                                <a class='custom-card' href='peliculas_ficha.php?id=3' title='".$array_peliculas[$i]['titulo']."' alt='".$array_peliculas[$i]['titulo']."'>
+                                                    <img class='card-img-top' src='imgs/peliculas/3.jpg' >		
 
-                    <td>
-                    <div>
-                        <form class="boton_borrar" method="post" action="peliculas_borrado.php">
-                        <div class="borrar"><input class="btn btn-danger" type="submit" value="Borrar" name="borra4"></div>
-                        </form>
-                    </div>
-                    </td>
-                    </table>
-                    
-                </td>
-            </table>
-            <?php
-                
+                                                    <div class='card-body'>
+                                                        <h5 class='nombre' style='font-weight: bold;color: black' href='peliculas_ficha.php?id=3' title='".$array_peliculas[$i]['titulo']."'>".$array_peliculas[$i]['titulo']."</h5>
+                                            
+                                                        <table>
+                                                            <td>
+                                                                <div>
+                                                                    <form class='boton_editar' method='post' action='peliculas_form.php'>
+                                                                    <div class='editar'><input class='btn btn-primary' type='submit' value='Editar' name='edita3'></div>
+                                                                    </form>
+                                                                </div>
+                                                            </td>
+                                            
+                                                            <td>
+                                                                <div>
+                                                                    <form class='boton_borrar' method='post' action='peliculas_borrado.php'>
+                                                                    <div class='borrar'><input class='btn btn-danger' type='submit' value='Borrar' name='borra3'></div>
+                                                                    </form>
+                                            
+                                                                </div>
+                                                            </td>
+                                                        </table>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </td>
+                                    ";
+                                break;
+                                case 4:
+                                    //PRIMERA PLANA
+                                    echo "
+                                        <td>
+                                            <div class='card' style='margin-bottom:5px;'>
+                                                <a class='custom-card' href='peliculas_ficha.php?id=4' title='".$array_peliculas[$i]['titulo']."' alt='".$array_peliculas[$i]['titulo']."'>
+                                                    <img class='card-img-top' src='imgs/peliculas/4.jpg'>		
+
+                                                    <div class='card-body'>
+                                                        <h5 class='nombre' style='font-weight: bold;color: black' href='peliculas_ficha.php?id=4' title='".$array_peliculas[$i]['titulo']."'>".$array_peliculas[$i]['titulo']."</h5>
+                                            
+                                                        <table>
+                                                            <td>
+                                                                <div>
+                                                                    <form class='boton_editar' method='post' action='peliculas_form.php'>
+                                                                    <div class='editar'><input class='btn btn-primary' type='submit' value='Editar' name='edita4'></div>
+                                                                    </form>
+                                                                </div>
+                                                            </td>
+                                            
+                                                            <td>
+                                                                <div>
+                                                                    <form class='boton_borrar' method='post' action='peliculas_borrado.php'>
+                                                                    <div class='borrar'><input class='btn btn-danger' type='submit' value='Borrar' name='borra4'></div>
+                                                                    </form>
+                                            
+                                                                </div>
+                                                            </td>
+                                                        </table>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </td>
+                                    ";
+                                break;
+                                
+                            }
+                        }
+                        echo "</table>";
+                    }
+                }else{
+                    echo "No hay películas disponibles.";
+                }
             ?>
         </div>
     </div>
